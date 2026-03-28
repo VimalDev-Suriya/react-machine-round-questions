@@ -6,6 +6,8 @@ import ToastContainer from './components/Toast/ToastContainer';
 import ToastProvider from './components/Toast/ToastProvider';
 import FileExplorer from './components/FileExplorer/FileExplorer';
 import Accordion from './components/Accordion/Accordion';
+import CheckboxContainer from './components/MultiCheckbox/CheckboxContainer';
+import CheckboxOptimzedContainer from './components/MultiCheckbox/FlattenDate_Optimzed/CheckboxOptimizedContainer';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
             <Route path="/user-input" element={<UserInputDebounce />} />
             <Route path="/file-explorer" element={<FileExplorer />} />
             <Route path="/accordion" element={<Accordion />} />
+            <Route path="/checkbox" element={<CheckboxContainer />} />
+            <Route path="/checkbox-op" element={<CheckboxOptimzedContainer />} />
           </Routes>
         </BrowserRouter>
       </ToastProvider>

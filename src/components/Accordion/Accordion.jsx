@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import './Accordion.scss';
 import AccordionItem from './AccordionItem';
 
 const AccordionContainer = (props) => {
