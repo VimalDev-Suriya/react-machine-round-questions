@@ -8,6 +8,7 @@ import FileExplorer from './components/FileExplorer/FileExplorer';
 import Accordion from './components/Accordion/Accordion';
 import CheckboxContainer from './components/MultiCheckbox/CheckboxContainer';
 import CheckboxOptimzedContainer from './components/MultiCheckbox/FlattenDate_Optimzed/CheckboxOptimizedContainer';
+import Container from './components/Model/Container';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/accordion" element={<Accordion />} />
             <Route path="/checkbox" element={<CheckboxContainer />} />
             <Route path="/checkbox-op" element={<CheckboxOptimzedContainer />} />
+            <Route path="/modal" element={<Container />} />
           </Routes>
         </BrowserRouter>
       </ToastProvider>
