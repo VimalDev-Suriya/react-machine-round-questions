@@ -31,7 +31,11 @@
 
         .modal-close{
             background: transparent;
-            outline: none;
+            border: none;
         }
     }
+}
+
+* :focus{
+    outline: 2px solid red
 }
