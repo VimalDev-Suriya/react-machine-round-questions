@@ -1,0 +1,1 @@
+export const FAKE_STORE_API_BASE_URL = import.meta.env.VITE_FAKE_STORE_BASE_URL

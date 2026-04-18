@@ -1,0 +1,20 @@
+.autocomplete-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+
+  .suggestions-container {
+    position: relative;
+    max-height: 30vh;
+    display: flex;
+    width: 100%;
+
+    .list {
+      position: absolute;
+      height: 50vh;
+      top: 0;
+      left: 0;
+    }
+  }
+}
