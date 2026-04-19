@@ -23,17 +23,20 @@ const AutoComplete = (props) => {
   });
   const debouncedValue = useDebounce(input, 3000);
 
-  console.log("custome", customeLoader);
-
   const handleInputChange = (e) => {
     setInput(e.target.value);
     onInputChange?.(e.target.value);
   };
 
-  const handleSuggestionSelect = (e) => {
-    // Final API call
-    console.log(e);
-    onSelect?.();
+  const handleSuggestionSelect = (text) => {
+    setInput(text);
+
+    setSuggestions(prev => ({
+      ...prev,
+      data: []
+    }))
+
+    onSelect(text);
   };
 
   const handleApiCall = async () => {
@@ -92,6 +95,7 @@ const AutoComplete = (props) => {
         input={input}
         dataKey={dataKey}
         customeError={customeError}
+        onSuggestionSelect={handleSuggestionSelect}
       />
     </div>
   );
