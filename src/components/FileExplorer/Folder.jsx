@@ -5,10 +5,11 @@ import {
   VscFile,
   VscNewFile,
   VscNewFolder,
+  VscRemove
 } from 'react-icons/vsc';
 
 const Folder = (props) => {
-  const { id, name, isFolder, items, updateNode } = props;
+  const { id, name, isFolder, items, updateNode, remove } = props;
   const [isOpen, setIsOpen] = useState(false);
   const [inputField, setInputFeild] = useState({
     visible: false,
@@ -43,6 +44,10 @@ const Folder = (props) => {
     }
   };
 
+  const removeNode = (id) => {
+    remove(id)
+  }
+
   return (
     <>
       {isFolder ? (
@@ -64,11 +69,13 @@ const Folder = (props) => {
             className="margin-right"
             onClick={(e) => addNewFolder(e, 'folder')}
           />
+          <VscRemove className='margin-right' onClick={() => removeNode(id)} />
         </div>
       ) : (
         <div>
           <VscFile color="grey" className="margin-right" />
           <span>{name}</span>
+          <VscRemove className='margin-left' onClick={() => removeNode(id)} />
         </div>
       )}
 
@@ -99,10 +106,10 @@ const Folder = (props) => {
         {/* Iterating over the list of subdocuments */}
         {items.length && isOpen
           ? items.map((item) => (
-              <div key={item.id}>
-                <Folder {...item} updateNode={updateNode} />
-              </div>
-            ))
+            <div key={item.id}>
+              <Folder {...item} updateNode={updateNode} remove={remove} />
+            </div>
+          ))
           : null}
       </div>
     </>

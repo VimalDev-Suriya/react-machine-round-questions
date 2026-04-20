@@ -10,6 +10,7 @@ import CheckboxContainer from "./components/MultiCheckbox/CheckboxContainer";
 import CheckboxOptimzedContainer from "./components/MultiCheckbox/FlattenDate_Optimzed/CheckboxOptimizedContainer";
 import Container from "./components/Model/Container";
 import AutoCompleteContainer from "./components/AutoComplete/AutoCompleteContainer";
+import MultiSelectSearchContainer from "./components/MultiSelectSearch/MultiSelectSearchContainer";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             />
             <Route path="/modal" element={<Container />} />
             <Route path="/autocomplete" element={<AutoCompleteContainer />} />
+            <Route path="/multi-select" element={<MultiSelectSearchContainer />} />
           </Routes>
         </BrowserRouter>
       </ToastProvider>

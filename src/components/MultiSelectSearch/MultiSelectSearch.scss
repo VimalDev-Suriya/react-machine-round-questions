@@ -1,0 +1,49 @@
+.multiselect-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+
+    input {
+        border: none;
+        outline: none;
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+
+        &::focus {
+            outline: none !important;
+            border: none !important;
+        }
+    }
+
+    .pills {
+        display: flex;
+        gap: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .suggestion-list {
+        position: absolute;
+        height: 50vh;
+        width: 100%;
+        padding: 1.5rem;
+        top: 3.5rem;
+        left: 0;
+        flex: 0;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+
+            li {
+                list-style-type: none;
+                cursor: pointer;
+
+            }
+        }
+    }
+}

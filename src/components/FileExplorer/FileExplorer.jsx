@@ -39,7 +39,7 @@ const fileExplorer = {
 
 const FileExplorer = () => {
   const [folderTree, setFolderTree] = useState(fileExplorer);
-  const { insertNode } = useTraverseTree();
+  const { insertNode, removeNode } = useTraverseTree();
 
   const updateNode = ({ nodeId, name, isFolder }) => {
     const updatedTree = insertNode(folderTree, {
@@ -51,7 +51,13 @@ const FileExplorer = () => {
     setFolderTree(updatedTree);
   };
 
-  return <Folder {...folderTree} updateNode={updateNode} />;
+  const remove = (nodeId) => {
+    const updatedTree = removeNode(folderTree, nodeId);
+
+    setFolderTree(updatedTree)
+  }
+
+  return <Folder {...folderTree} updateNode={updateNode} remove={remove} />;
 };
 
 export default FileExplorer;
