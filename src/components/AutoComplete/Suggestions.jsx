@@ -3,6 +3,9 @@ const Suggestions = (props) => {
     props;
 
   const highlightedText = (text, query) => {
+    // * Here the Paranthesis in Regular Expression detremins the group of characters that can be matched.
+    // Eg: If we want to group the (ha) in the following string "hahaha", we can do (ha)+ to do teh same.
+    // So in our example we want to group the query in the given text.
     const parts = text.split(new RegExp(`(${query})`, 'gi'));
 
     return <span>
