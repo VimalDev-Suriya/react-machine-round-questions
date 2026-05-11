@@ -69,13 +69,13 @@ const ProductTable = () => {
   }, [products.data]);
 
   const handleSort = (key) => {
-    // let direction = 'asc';
-    // const existing = sortConfig.find((s) => s.key === key);
-    // if (existing && existing.direction === 'asc') direction = 'desc';
-    // setSortConfig((prev) => {
-    //   const except = prev.filter((p) => p.key !== key);
-    //   return [...except, { key, direction }];
-    // });
+    let direction = 'asc';
+    const existing = sortConfig.find((s) => s.key === key);
+    if (existing && existing.direction === 'asc') direction = 'desc';
+    setSortConfig((prev) => {
+      const except = prev.filter((p) => p.key !== key);
+      return [...except, { key, direction }];
+    });
   };
 
   if (products.loading) {

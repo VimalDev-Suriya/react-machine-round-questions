@@ -12,6 +12,7 @@ import Container from './components/Model/Container';
 import AutoCompleteContainer from './components/AutoComplete/AutoCompleteContainer';
 import MultiSelectSearchContainer from './components/MultiSelectSearch/MultiSelectSearchContainer';
 import ProductTableContainer from './components/ProductTable/ProductTableContainer';
+import MultiStepForm from './components/multi-step-form/MultiStepForm';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
               element={<MultiSelectSearchContainer />}
             />
             <Route path="/product-table" element={<ProductTableContainer />} />
+            <Route path="/multi-step-form" element={<MultiStepForm />} />
           </Routes>
         </BrowserRouter>
       </ToastProvider>
