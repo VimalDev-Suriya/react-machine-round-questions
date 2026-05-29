@@ -13,6 +13,10 @@ import AutoCompleteContainer from './components/AutoComplete/AutoCompleteContain
 import MultiSelectSearchContainer from './components/MultiSelectSearch/MultiSelectSearchContainer';
 import ProductTableContainer from './components/ProductTable/ProductTableContainer';
 import MultiStepForm from './components/multi-step-form/MultiStepForm';
+import WindowResize from './components/Throttle/WindowResize';
+import InfiniteScroll from './components/Throttle/InfiniteScroll';
+import InfiniteScrollV2 from './components/InfiniteScroll/InfiniteScrollV2';
+import AbortApiCalls from './components/AbortApiCalls/AbortApiCalls';
 
 function App() {
   return (
@@ -38,6 +42,10 @@ function App() {
             />
             <Route path="/product-table" element={<ProductTableContainer />} />
             <Route path="/multi-step-form" element={<MultiStepForm />} />
+            <Route path="/window-resize" element={<WindowResize />} />
+            <Route path="/infinite-scroll" element={<InfiniteScroll />} />
+            <Route path="/infinite-scroll-v2" element={<InfiniteScrollV2 />} />
+            <Route path="/abort-api" element={<AbortApiCalls />} />
           </Routes>
         </BrowserRouter>
       </ToastProvider>
